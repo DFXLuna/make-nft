@@ -1,0 +1,23 @@
+{
+    "name": "alch",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "compile": "npx hardhat compile",
+        "deploy:g": "npx hardhat --network goerli run ./scripts/deploy.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "private": true,
+    "dependencies": {
+        "@alch/alchemy-web3": "^1.4.6",
+        "@openzeppelin/contracts": "^4.7.1",
+        "dotenv": "^16.0.1"
+    },
+    "devDependencies": {
+        "@nomiclabs/hardhat-ethers": "^2.1.0",
+        "ethers": "^5.0.0",
+        "hardhat": "^2.10.1"
+    }
+}

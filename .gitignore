@@ -1,0 +1,4 @@
+.env
+addresses.txt
+node_modules
+cache

@@ -1,0 +1,15 @@
+{
+    "attributes": [
+        {
+            "trait_type": "emi?",
+            "emi": "emi"
+        },
+        {
+            "trait_type": "SHA256",
+            "SHA256": "7c3939768eeb81577bd04110700c2c07d0350b42bd315f2c73a346bb089eef5f"
+        }
+    ],
+    "description": "Emi's avatar NFT by Joghs",
+    "image": "ipfs://QmZfzpbSXfL7Z8Mv5Qp9qNLvX8ZWgstpWxHtmC4c6WaxjT",
+    "name": "Emi"
+  }
