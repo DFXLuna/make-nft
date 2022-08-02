@@ -12,7 +12,7 @@ contract EmiNFT is ERC721URIStorage{
 
     constructor() ERC721("EmiNFT", "eNFT") {}
 
-    function mintNFT(address recipient, string memory tokenURI)
+    function mintNFT(address recipient, string memory tokenURI) public
         returns (uint256)
     {
         _tokenIds.increment();

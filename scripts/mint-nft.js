@@ -9,7 +9,7 @@ const web3 = createAlchemyWeb3(API_URL);
 // This is the compiled contract from hardhat
 const contract = require("../artifacts/contracts/nft.sol/EmiNFT.json"); // Change this if deploying a new contract
 // This is the address of the deployed contract on the blockchain
-const contractAddress = "0x92354342Aff4CACC4edaAA401688AB9f667F7454"; // Change this if deploying a new contract
+const contractAddress = "0xE28ECA7524c71A5Eb1A42867d3f9980308C5f98A"; // Change this if deploying a new contract
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 
