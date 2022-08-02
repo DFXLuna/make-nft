@@ -1,16 +1,22 @@
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const PUBLIC_KEY = process.env.PUBLIC_KEY
-const PRIVATE_KEY = process.env.PRIVATE_KEY
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
-const contract = require("../artifacts/contracts/nft.sol/EmiNFT.json")
-const contractAddress = "0x92354342Aff4CACC4edaAA401688AB9f667F7454"
+require("dotenv").config();
+const API_URL = process.env.API_URL;
+const PUBLIC_KEY = process.env.PUBLIC_KEY;
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
+const web3 = createAlchemyWeb3(API_URL);
+
+
+// This is the compiled contract from hardhat
+const contract = require("../artifacts/contracts/nft.sol/EmiNFT.json"); // Change this if deploying a new contract
+// This is the address of the deployed contract on the blockchain
+const contractAddress = "0x92354342Aff4CACC4edaAA401688AB9f667F7454"; // Change this if deploying a new contract
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
+
+const IPFS_LINK = "ipfs://Qmc2rwDgTfBqinPMLuhcuwZdkTuRxdgR8bFMfLpT1sBNeA";
+
 async function mintNFT(tokenURI) {
-    const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //get latest nonce
-    //the transaction
+    const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //get latest nonce from your wallet
     const tx = {
         from: PUBLIC_KEY,
         to: contractAddress,
@@ -44,4 +50,4 @@ async function mintNFT(tokenURI) {
         })
 }
 
-mintNFT("ipfs://Qmc2rwDgTfBqinPMLuhcuwZdkTuRxdgR8bFMfLpT1sBNeA")
+mintNFT(IPFS_LINK);

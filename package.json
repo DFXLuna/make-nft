@@ -1,15 +1,16 @@
 {
-    "name": "alch",
+    "name": "mint-nft",
     "version": "1.0.0",
     "description": "",
+    "author": "",
+    "license": "MIT",
+    "private": true,
     "main": "index.js",
     "scripts": {
         "compile": "npx hardhat compile",
-        "deploy:g": "npx hardhat --network goerli run ./scripts/deploy.js"
+        "deploy:g": "npx hardhat --network goerli run ./scripts/deploy.js",
+        "mint": "node ./scripts/mint-nft.js"
     },
-    "author": "",
-    "license": "ISC",
-    "private": true,
     "dependencies": {
         "@alch/alchemy-web3": "^1.4.6",
         "@openzeppelin/contracts": "^4.7.1",
