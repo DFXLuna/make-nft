@@ -1,4 +1,6 @@
 # clone-nft
+EDIT (2025-06-21): This repo was put together as part of a bigger project demonstrating the logical and technical flaws with how NFTs are currently used. An article [was published here](https://hackernoon.com/ownership-authenticity-and-cloning-of-nfts-for-the-greater-good) that explains the problem in more detail. It won [Hackernoon's Defi Writing contest Round 2](https://hackernoon.com/the-defi-writing-contest-round-2-results-announced)!
+  
 This repo demonstrates the ease of minting an NFT on the Ethereum blockchain using Node, Alchemy and Alchemy-web3
 Adapting https://docs.alchemy.com/alchemy/tutorials/how-to-create-an-nft
 
